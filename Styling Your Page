@@ -6,4 +6,7 @@
             color: blue;
         }
     </style>
+    #id {
+        color: red;
+    }
 </head>
