@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First page</title>
+</head>
+<body>
+    <h1>Hello, Web</h1>
+    <p>This is first page</p>
+    <img src="flower.jpg"alt="A yellow flower">
+</body>
