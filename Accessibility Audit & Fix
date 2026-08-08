@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Site - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">BrandName</a>
+    <nav aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Simple Responsive Layout</h1>
+      <p>Works on phone (320px), tablet (768px), and desktop (1200px).</p>
+    </div>
+
+    <figure>
+      <img 
+        src="https://c8.alamy.com/comp/D1K3PD/man-and-woman-shaking-their-hands-D1K3PD.jpg" 
+        alt="A man and woman in business attire smiling and shaking hands" 
+        class="responsive-img"
+      />
+      <figcaption>Two business partners shaking hands after reaching an agreement.</figcaption>
+    </figure>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Card 1</h2>
+        <p>This is basic text inside card one.</p>
+      </div>
+
+      <div class="card">
+        <h2>Card 2</h2>
+        <p>This is basic text inside card two.</p>
+      </div>
+
+      <div class="card">
+        <h2>Card 3</h2>
+        <p>This is basic text inside card three.</p>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
