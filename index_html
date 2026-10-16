@@ -32,6 +32,9 @@
             <li>reading books</li>
         </ul>
         </section>
+        <figure>
+            <img src="fower.jpg"alt="A beautiful flower">
+        </figure>
     </main>
 </body>
 </html>
