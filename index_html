@@ -4,6 +4,22 @@
 <title>My First page</title>
 </head>
 <body>
-    <h1>Hello, Web</h1>
-    <p>This is first page</p>
+    <header>
+        <h1>Hello, Web</h1>
+   
+    <p>This is first page</p> 
+</header>
+    <nav>
+        <a href="#about">About me</a>
+        <a href="#hobbies">My Hobbies</a>
+        <a href="#favorite">My Favorite Things</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello, I'm a web developer!</p>
+        </section>
+    </main>
 </body>
+</html>
