@@ -28,6 +28,10 @@
             <h2>My Favorite Things</h2>
             <p>My favorite color is yellow.</p>
         </section>
+        <ul>
+            <li>playing video games</li>
+            <li>reading books</li>
+        </ul>
     </main>
 </body>
 </html>
