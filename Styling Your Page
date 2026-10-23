@@ -1,12 +1,37 @@
-<link rel='stylesheet'>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Styling Your Page</title>
-    <style>
-        p .classname {
-            color: blue;
-        }
-    </style>
-    #id {
-        color: red;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Webpage Example</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+
+    <header>
+
+        <h1 id="main-heading">Modern Web Design Basics</h1>
+        <p>Demonstrating clean CSS architecture and styling principles.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Understanding the Box Model</h2>
+            <p>Every element on a web page is a rectangular box made up of margins, borders, padding, and the actual content. This card has a solid border, custom internal padding, and external spacing via margins.</p>
+        </section>
+
+        <div id="special-callout">
+            <h3>Complementary Color Scheme</h3>
+            <p>This section uses a <span class="highlight-text">vibrant orange</span> accent color which sits opposite to the <span class="highlight-text" style="color: #1a2530;">deep navy</span> primary palette on the color wheel, creating high contrast and visual interest.</p>
+        </div>
+
+        <section id="contact-section">
+            <h3>Get in Touch</h3>
+            <p>This layout is intentionally styled with modern typography, pleasant padding, and structured borders instead of relying on default browser styling.</p>
+        </section>
+
+    </main>
+</body>
+</html>
