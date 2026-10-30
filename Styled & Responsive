@@ -1,58 +1,233 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Site</title>
-  <link rel="stylesheet" href="style.css">
+  <title>HI everybody</title>
+ 
+  <style>
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --color-primary: #1e3a8a;      
+      --color-primary-dark: #172554;
+      --color-accent: #f97316;      
+      --color-accent-hover: #ea580c;
+      --color-bg: #f8fafc;           
+      --color-surface: #ffffff;      
+      --color-text: #0f172a;       
+      --color-text-muted: #475569;   
+      --color-border: #cbd5e1;
+
+      --space-xs: 8px;
+      --space-sm: 16px;
+      --space-md: 24px;
+      --space-lg: 32px;
+      --space-xl: 48px;
+      --space-xxl: 64px;
+
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --transition-smooth: 0.25s ease-in-out;
+    }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      color: var(--color-primary-dark);
+      line-height: 1.25;
+      margin-bottom: var(--space-sm);
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+
+    p {
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-sm);
+    }
+    #site-header {
+      background-color: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-sm) var(--space-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: var(--space-md);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--color-text);
+      font-weight: 500;
+      transition: color var(--transition-smooth);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--color-accent);
+    }
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+      padding: var(--space-xl) 0;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero-image-placeholder {
+      width: 100%;
+      max-width: 450px;
+      height: 280px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-surface);
+      font-weight: 600;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      margin-top: var(--space-xl);
+    }
+
+    .card {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: var(--space-md);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--color-accent);
+      color: var(--color-surface);
+      padding: var(--space-sm) var(--space-lg);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color var(--transition-smooth);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--color-accent-hover);
+    }
+
+    #site-footer {
+      background-color: var(--color-primary-dark);
+      color: var(--color-surface);
+      text-align: center;
+      padding: var(--space-lg) var(--space-md);
+      margin-top: var(--space-xxl);
+    }
+
+    #site-footer p {
+      color: #cbd5e1;
+    }
+    @media (min-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      
+      .hero-section {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+      }
+
+      .hero-content { flex: 1; }
+      .hero-image-placeholder { flex: 1; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1200px) {
+      h1 { font-size: 3rem; }
+      .features-grid { grid-template-columns: repeat(3, 1fr); }
+      .main-content { padding: var(--space-xxl) var(--space-lg); }
+    }
+  </style>
 </head>
 <body>
-
-  <header>
-    <a href="#" class="logo">BrandName</a>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
+  <header id="site-header">
+    <div class="nav-container">
+      <a href="#" class="logo">BrandName</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-
-  <main>
-    <div class="hero">
-      <h1>Simple Responsive Layout</h1>
-      <p>Works on phone (320px), tablet (768px), and desktop (1200px).</p>
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <h2>Card 1</h2>
-        <p>This is basic text inside card one.</p>
+  <main class="main-content">
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Build Better Experiences</h1>
+        <p>A fully responsive layout utilizing structured spacing tokens, a clean CSS Grid, and custom Google typography built for scalability.</p>
+        <button class="btn">Get Started</button>
       </div>
-
-      <div class="card">
-        <h2>Card 2</h2>
-        <p>This is basic text inside card two.</p>
+      <div class="hero-image-placeholder">
+        Hero Graphic
       </div>
-
-      <div class="card">
-        <h2>Card 3</h2>
-        <p>This is basic text inside card three.</p>
-      </div>
-    </div>
+    </section>
   </main>
-
-  <footer>
-    <p>&copy; 2026 BrandName</p>
-  </footer>
-  <figure>
-  <img 
-    src="https://c8.alamy.com/comp/D1K3PD/man-and-woman-shaking-their-hands-D1K3PD.jpg" 
-    alt="A man and woman in business attire smiling and shaking hands" 
-    class="responsive-img"
-  />
-  <figcaption>Two business partners shaking hands after reaching an agreement.</figcaption>
-</figure>
-
 </body>
+</html>
 </html>
