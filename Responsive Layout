@@ -1,15 +1,42 @@
-<link rel='stylesheet'>
+<html lang="en">
 <head>
-    .container {
-  flex-wrap: nowrap | wrap | wrap-reverse;
-}
-    <title>Styling Your Page</title>
-    <style>
-        p .classname {
-            color: blue;
-        }
-    </style>
-    #id {
-        color: red;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HI Everyone</title>
 </head>
+<body>
+
+  <div class="page-wrapper">
+
+    <header class="site-header">
+      <div class="logo">CS 101</div>
+      <nav class="nav-menu">
+        <a href="#overview">Overview</a>
+        <a href="#assignments">Assignments</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Homework 2: Advanced CSS Layouts</h1>
+      <p>Mastering Flexbox, CSS Grid, and Responsive Design Patterns.</p>
+    </section>
+
+    <main class="main-layout">
+      
+      <article class="content-area">
+        <h2>Assignment Overview</h2>
+        <p>In this assignment, you will explore modern CSS layout techniques. By combining CSS Grid for macro-layouts and Flexbox for micro-alignments, you can create robust, responsive web pages that scale seamlessly across devices.</p>
+        
+        <h3>Key Objectives</h3>
+        <ul class="objectives-list">
+          <li>Understand Grid tracks, rows, and fractional units (<code>fr</code>).</li>
+          <li>Build flexible component cards using Flexbox.</li>
+          <li>Implement mobile-first media queries for targeted breakpoints.</li>
+        </ul>
+    </article>
+    </main>
+ </div>
+
+</body>
+</html>
